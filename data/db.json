@@ -1,0 +1,40 @@
+{
+  "paintingsData": [
+    {
+      "id": 1,
+      "title": "Gossip",
+      "tech": "acrylic/canvas",
+      "size": "50 x 40 cm",
+      "price": 300,
+      "img": "./images/gossip.jpg",
+      "reserved": true
+    },
+    {
+      "id": 2,
+      "title": "Burning",
+      "tech": "acrylic/canvas",
+      "size": "50 x 40 cm",
+      "price": 800,
+      "img": "./images/burning.jpg",
+      "reserved": true
+    },
+    {
+      "id": 3,
+      "title": "Idolatry",
+      "tech": "acrylic/canvas",
+      "size": "120 x 70 cm",
+      "price": 300,
+      "img": "./images/idolatry.jpg",
+      "reserved": false
+    },
+    {
+      "id": 4,
+      "title": "Bread & Circus",
+      "tech": "acrylic/canvas",
+      "size": "50 x 40 cm",
+      "price": 400,
+      "img": "./images/bread-circus.jpg",
+      "reserved": false
+    }
+  ]
+}

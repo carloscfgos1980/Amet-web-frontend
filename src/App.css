@@ -1,0 +1,49 @@
+.imagen-overlay{
+    position: relative;
+}
+.imagen-overlay img{
+    display:block
+}
+.text-overlay{
+    position: absolute;
+    text-align: center;
+    top:0;
+    left:0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,.5);
+    opacity: 0;
+    transition: 350ms opacity ease-in-out;
+}
+
+.text-overlay p{
+    color: yellowgreen;
+    transform: translateY(250px);
+    font-size: 30px;
+    font-weight: bolder;
+}
+
+
+:hover {
+    opacity: 1;
+}
+
+.accord p, li{
+    font-size: 20px;
+    text-align: justify;
+}
+.derecha{
+    float:right;
+    padding-left: 20px;
+}
+
+.izquierda{
+    float: left;
+    margin: 10px;
+    padding-right: 20px;
+}
+.header{
+    color:red;
+}
+
+
