@@ -16,7 +16,7 @@
       "size": "50 x 40 cm",
       "price": 800,
       "img": "./images/burning.jpg",
-      "reserved": true
+      "reserved": false
     },
     {
       "id": 3,
