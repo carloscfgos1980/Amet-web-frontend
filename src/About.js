@@ -18,11 +18,11 @@ const About = () => {
                             <p>
                                 From Cienfuegos, my city, and I was born in Cuba. I started  around 20 years ago, my step into the art world by the teaching of many art professors, which I'm very thankful for a part of  the knowledge that I have today. As an artist I'm constantly learning from the others, from their stories  mixing with my own experience as a  person and from there I start to give shape to my palette, always following the concept from raw colors and lines. From a moment I can remind you of a wall from the street full of life and struggles. It is not my intention to follow the general concept of beauty or a standard beauty that is easy to notice.
                             </p>
-                            <img className="derecha" width='400px' src="./images-about/amet-wall.png" alt="Amet wall" />
+                            <img className="derecha" width='400px' src="./images/about/amet-wall.png" alt="Amet wall" />
                             <p>
                                 In Cuba I have participated in many collective art events and solo shows but also have the joy of being co-founder of the art experimental project <a href='https://www.facebook.com/profile.php?id=100009424089335'>"Poco Bonito"</a> with Carlos Infante and other artist friends. There was our creative space and support where all the ideas was dancing in our head and brushes but also with our workshop we had a way to connect to with neighbors in the area from the  workshop which also children  and teenager was able to get close and see how we prepare our canvas and colors so in that way we made and influence in the community showing others way to create that not necessary was academic but with creativity freedom, freedom that many time  cause us political polemics with the establishment and also collateral to our gallery and with part of the incomes from the art selling. We had an event, creating  an scenery on the street where singers and bands coming from different cities  from cuba with not voice at the tv or radio the name of this project event was kbola which the  popular expression(kbola) can  meanings like saying hi or calling the attention from someone can be used on both ways when you are angry or when you are happy , this educative energies that surround us in our projects in Cuba. I was able to continue in Netherlands teaching in school name Isa Amsterdam as visual art professor teacher work that i enjoy and i combined also with my independent project as artist
                             </p>
-                            <img className="izquierda" width='400px' src="./images-about/amet_kbola.jpg" alt="Amet KBola" />
+                            <img className="izquierda" width='400px' src="./images/about/amet_kbola.jpg" alt="Amet KBola" />
                             <p>
                                 Poco Bonito gallery is a place where flow in harmony diverse
                                 artistic expressions as photography, painting and sculpture. Pieces
@@ -57,7 +57,7 @@ const About = () => {
                     </Accordion.Header>
                     <Accordion.Body>
                         <div className="accord">
-                            <img className="derecha" width='400px' src="./images-about/amet-kargadoor.jpg" alt="Amet Kargadoor" />
+                            <img className="derecha" width='400px' src="./images/about/amet-kargadoor.jpg" alt="Amet Kargadoor" />
                             <p>I live in Holland since 2018. Integrating into a different society requires persistence and creativity. Therefore my stories and my style keep on changing. As an artist I keep on developing and I never stop learning. I combine the stories from others, scenes that I see on the street and add those to my own live experience. From there I compose my palette. I don’t offer a general concept of beauty nor an accessible style. My work is characterized by raw colors and lines that resemble brick walls with rough surfaces and street art.</p>
                             <p>I have participated in ....</p>
                             <p>Today I’m an extra curricular art teacher at the International School of Amsterdam. In my classes my goal is not to teach in an academic way, but to inspire my students to be free in their expression, similar to the spirit that our gallery in Cuba used to have. </p>

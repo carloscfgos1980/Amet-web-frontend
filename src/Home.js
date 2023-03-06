@@ -11,7 +11,7 @@ const Home = () => {
         >
             <div className="row justify-content-center align-items-center">
                 <div className="col-text-center col-sm-5">
-                    <img className="pb-2 px-5" width='110%' src="./images-home/amet-portfolio.png" alt="Amet Portfolio" />
+                    <img className="pb-2 px-5" width='110%' src="./images/home/amet-portfolio.png" alt="Amet Portfolio" />
                 </div>
                 <div className="col-text-center col-sm-6" >
                     <h2 className="display-6 pb-4 mx-3 text-start">Art goes beyond the sense of beauty, it has an "... integral rol in the fight for social change and the quest for freedom of expression.</h2>
@@ -27,7 +27,7 @@ const Home = () => {
                     <div className="col-sm-4">
                         <div className="imagen-overlay">
                             <Link to="/paintings">
-                                <img width='100%' src="./images-home/amet-notebook.png" alt="Amet notebook" />
+                                <img width='100%' src="./images/home/amet-notebook.png" alt="Amet notebook" />
                                 <div className="text-overlay">
                                     <p>click to watch more paintings</p>
                                 </div>

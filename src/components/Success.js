@@ -1,4 +1,4 @@
-import celebration from "./images-plus/celebration.gif"
+import celebration from "./images/plus/celebration.gif"
 import { AiFillCloseCircle } from 'react-icons/ai';
 import { Button } from "react-bootstrap";
 import { Link } from "react-router-dom";

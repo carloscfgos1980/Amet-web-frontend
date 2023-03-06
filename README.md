@@ -53,6 +53,6 @@ ShowShoppingCart => ContactsClients.js (inputfield) => CheckData.js (it contains
                       }
                       )}
 
-- Looping thro the array of painting to select only the paint we clicked to be shown in the DOM
+- Looping thru the array of painting to select only the paint we clicked to be shown in the DOM
   N: When I" used useParams. I couldn't import the image from public file so I had to use the follwing method and make a copy of the image folder into src folder, the method that I used was this one:
   <img src={require(`${imagen}`)}

@@ -6,7 +6,7 @@
       "tech": "acrylic/canvas",
       "size": "50 x 40 cm",
       "price": 300,
-      "img": "./images/gossip.jpg",
+      "img": "./images/paintings_available/gossip.jpg",
       "reserved": true
     },
     {
@@ -15,7 +15,7 @@
       "tech": "acrylic/canvas",
       "size": "50 x 40 cm",
       "price": 800,
-      "img": "./images/burning.jpg",
+      "img": "./images/paintings_available/burning.jpg",
       "reserved": false
     },
     {
@@ -24,7 +24,7 @@
       "tech": "acrylic/canvas",
       "size": "120 x 70 cm",
       "price": 300,
-      "img": "./images/idolatry.jpg",
+      "img": "./images/paintings_available/idolatry.jpg",
       "reserved": false
     },
     {
@@ -33,7 +33,7 @@
       "tech": "acrylic/canvas",
       "size": "50 x 40 cm",
       "price": 400,
-      "img": "./images/bread-circus.jpg",
+      "img": "./images/paintings_available/bread-circus.jpg",
       "reserved": false
     }
   ]
