@@ -45,22 +45,22 @@ const ContactsClients = () => {
                         <Form.Group className="mb-3" controlId="formBasicPassword">
                             <Form.Control
                                 onChange={updateInput}
-                                type="text" name="name" placeholder="Name & Last Name" />
+                                type="text" name="name" placeholder="Name" />
                         </Form.Group>
                         <Form.Group className="mb-3" controlId="formBasicPassword">
-                            <Form.Control type="text" name="city" onChange={updateInput} placeholder="City" />
-                        </Form.Group>
-                        <Form.Group className="mb-3" controlId="formBasicPassword">
-                            <Form.Control type="text" name="country" onChange={updateInput} placeholder="Country" />
-                        </Form.Group>
-                        <Form.Group className="mb-3" controlId="formBasicPassword">
-                            <Form.Control type="text" name="telephone" onChange={updateInput} placeholder="Telephone" />
+                            <Form.Control type="text" name="last_name" onChange={updateInput} placeholder="Last Name" />
                         </Form.Group>
                         <Form.Group className="mb-3" controlId="formBasicEmail">
                             <Form.Control type="email" name="email" onChange={updateInput} placeholder="Your email" />
                             <Form.Text className="text-muted">
                                 We'll never share your email with anyone else.
                             </Form.Text>
+                        </Form.Group>
+                        <Form.Group className="mb-3" controlId="formBasicPassword">
+                            <Form.Control type="text" name="telephone" onChange={updateInput} placeholder="Telephone" />
+                        </Form.Group>
+                        <Form.Group className="mb-3" controlId="formBasicPassword">
+                            <Form.Control type="text" name="country" onChange={updateInput} placeholder="Country" />
                         </Form.Group>
                     </div>
                     <div className="col-sm-6 me-5">

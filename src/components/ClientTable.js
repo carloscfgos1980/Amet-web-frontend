@@ -45,16 +45,16 @@ const ClientTable = () => {
                 <td>{clientAllData.name}</td>
               </tr>
               <tr>
+                <td>Last Name:</td>
+                <td>{clientAllData.name}</td>
+              </tr>
+              <tr>
                 <td>Email:</td>
                 <td>{clientAllData.email}</td>
               </tr>
               <tr>
                 <td>Telephone:</td>
                 <td>{clientAllData.telephone}</td>
-              </tr>
-              <tr>
-                <td>City:</td>
-                <td>{clientAllData.city}</td>
               </tr>
               <tr>
                 <td>Country:</td>
@@ -66,6 +66,7 @@ const ClientTable = () => {
 
         <Card className="col-sm-4 m-1">
           {addedPainting.map(paint => {
+
             return (
               <Card.Body key={paint.id}>
                 <p>Paiting's title: {paint.title}</p>
@@ -78,7 +79,9 @@ const ClientTable = () => {
           <Card.Body>TOTAL: {total}</Card.Body>
         </Card>
         <Link className="col-sm-1 ms-5 m-1" to="/success">
-          <Button variant="success" >CONFIRM</Button>{' '}
+          <Button
+            variant="success"
+          >CONFIRM</Button>{' '}
         </Link>
       </div>
     </div>
