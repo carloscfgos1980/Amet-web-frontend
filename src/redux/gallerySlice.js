@@ -148,7 +148,9 @@ const gallerySlice = createSlice({
         },
         getRegisterNum: (state, action) => {
             console.log("payload", action.payload)
-            state.registerNum = action.payload
+            if (state.registerNum === null) {
+                state.registerNum = action.payload
+            }
             console.log("resgiter number in store:", state.registerNum)
         },
 

@@ -16,13 +16,7 @@ const Painting = () => {
     const { title } = useParams();
 
 
-    const getRegisterNumber = () => {
-        if (registerNumber === null) {
-            return Date.now()
-        } else {
-            return registerNumber
-        }
-    }
+
 
 
     const addPaintingCart = (piece) => {
@@ -30,7 +24,7 @@ const Painting = () => {
         dispatch(paintReservedAsync(piece));
         dispatch(addReservedPaintAsync({
             title: piece.title,
-            registerNum: getRegisterNumber,
+            registerNum: registerNumber,
             tech: piece.tech,
             size: piece.size,
             price: piece.price,
