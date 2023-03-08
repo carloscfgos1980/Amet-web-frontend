@@ -1,6 +1,6 @@
 import { createSlice, createAsyncThunk } from '@reduxjs/toolkit';
 //import paintingsData from '../components/paintingsData'
-const API_URL ='http://localhost:8000/paintingsData';
+const API_URL = 'http://localhost:8000/paintingsData';
 
 export const getDataAsync = createAsyncThunk(
     'gallery/getDataAsync',
@@ -25,8 +25,8 @@ export const paintReservedAsync = createAsyncThunk(
         });
 
         if (resp.ok) {
-            const todo = await resp.json();
-            return { todo };
+            const reservedPainting = await resp.json();
+            return { reservedPainting };
         }
     }
 );
@@ -42,8 +42,25 @@ export const paintNotReservedAsync = createAsyncThunk(
         });
 
         if (resp.ok) {
-            const todo = await resp.json();
-            return { todo };
+            const reservedPainting = await resp.json();
+            return { reservedPainting };
+        }
+    }
+);
+export const addReservedPaintAsync = createAsyncThunk(
+    'gallery/addReservedPaintAsync',
+    async (payload) => {
+        const resp = await fetch('http://localhost:8000/reservedPaintings', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify(payload),
+        });
+
+        if (resp.ok) {
+            const reservedPainting = await resp.json();
+            return { reservedPainting };
         }
     }
 );
@@ -51,18 +68,20 @@ export const paintNotReservedAsync = createAsyncThunk(
 const gallerySlice = createSlice({
     name: 'gallery',
     initialState: {
-        mockData:[],
+        // mockData:[],
         paintingsData: [],
         addedPainting: [],
         alreadyAdded: false,
         clientAllData: [],
         fanAllData: [],
-        isLoading:true,
+        isLoading: true,
+        registerNum: null,
+        reservedPaintings: [],
     },
     reducers: {
         addPainting: (state, action) => {
             //console.log("action", action.payload)
-            const {title, id, tech, price, img, reserved} = action.payload;
+            const { title, id, tech, price, img, reserved } = action.payload;
             if (
                 state.addedPainting
                     .map((item) => item.title)
@@ -90,7 +109,7 @@ const gallerySlice = createSlice({
                 });
                 state.paintingsData = existingtItems;
                 state.addedPainting.push(newPaintCart);
-                state.alreadyAdded= true;
+                state.alreadyAdded = true;
 
             }
         },
@@ -126,18 +145,24 @@ const gallerySlice = createSlice({
         },
         resetAddedPainting: (state) => {
             state.addedPainting = [];
-        }
+        },
+        getRegisterNum: (state, action) => {
+            console.log("payload", action.payload)
+            state.registerNum = action.payload
+            console.log("resgiter number in store:", state.registerNum)
+        },
+
     },
     extraReducers: {
         [getDataAsync.pending]: (state, action) => {
             console.log('fetching data...');
-            state.isLoading=true;
+            state.isLoading = true;
         },
         [getDataAsync.fulfilled]: (state, action) => {
             console.log('Data fetched successfully!')
             console.log(action.payload.dataPaintings)
-            state.paintingsData=action.payload.dataPaintings;
-            state.isLoading=false;
+            state.paintingsData = action.payload.dataPaintings;
+            state.isLoading = false;
             return action.payloads;
         },
         [paintReservedAsync.fulfilled]: (state, action) => {
@@ -158,10 +183,15 @@ const gallerySlice = createSlice({
             });
             state.paintingsData = updatedDataPaintings;
         },
+        [addReservedPaintAsync.fulfilled]: (state, action) => {
+            console.log("payload reserved paintings", action.payload)
+            state.reservedPaintings = action.payload;
+            console.log("reserved paintings", state.reservedPaintings)
+        },
     }
 });
 
 
-export const { addPainting, feedback, removePainting, clientData, switchFalse, fansData, resetAddedPainting } = gallerySlice.actions;
+export const { addPainting, feedback, removePainting, clientData, switchFalse, fansData, resetAddedPainting, getRegisterNum } = gallerySlice.actions;
 
 export default gallerySlice.reducer;

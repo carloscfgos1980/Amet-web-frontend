@@ -39,12 +39,19 @@
   ],
   "reservedPaintings": [
     {
-      "hello": "Wolrd"
+      "title": "Burning",
+      "tech": "acrylic/canvas",
+      "size": "50 x 40 cm",
+      "price": 800,
+      "id": 1
+    },
+    {
+      "title": "Idolatry",
+      "tech": "acrylic/canvas",
+      "size": "120 x 70 cm",
+      "price": 300,
+      "id": 2
     }
   ],
-  "customers": [
-    {
-      "hello": "Customer"
-    }
-  ]
+  "customers": []
 }

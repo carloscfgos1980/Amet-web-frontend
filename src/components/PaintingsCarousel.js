@@ -1,13 +1,23 @@
 import { Carousel } from 'react-bootstrap';
-import { useSelector } from 'react-redux';
+import { useSelector, useDispatch } from 'react-redux';
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
+import { getRegisterNum } from '../redux/gallerySlice';
+
 
 
 const PaintingsCarousel = () => {
     const paintingsData = useSelector(state => state.data.paintingsData);
-    const apiData=useSelector(state=>state.data.mockData);
+    const apiData = useSelector(state => state.data.mockData);
     console.log('apiData', apiData);
+
+    const dispatch = useDispatch();
+
+    let registerNumber = Date.now()
+    const addRegisterNum = () => {
+        dispatch(getRegisterNum(registerNumber));
+
+    }
 
 
     return (
@@ -30,6 +40,7 @@ const PaintingsCarousel = () => {
 
                                     <Link to={`/art/${painting.title}`}>
                                         <img
+                                            onClick={() => addRegisterNum()}
                                             width='40%'
                                             src={painting.img}
                                             alt='slide'

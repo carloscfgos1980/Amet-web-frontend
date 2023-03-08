@@ -1,22 +1,40 @@
 import { Button } from "react-bootstrap";
 import { useDispatch, useSelector } from "react-redux";
 import { Link, useParams } from "react-router-dom";
-import { addPainting, paintReservedAsync, switchFalse } from "../redux/gallerySlice";
+import { addPainting, addReservedPaintAsync, paintReservedAsync, switchFalse } from "../redux/gallerySlice";
 import AlertAdded from "./AlertAdded";
 
 
 const Painting = () => {
 
     const alreadyAdded = useSelector(state => state.data.alreadyAdded);
+    const registerNumber = useSelector(state => state.data.registerNum);
+    const paintingsData = useSelector(state => state.data.paintingsData);
     //console.log("already added", alreadyAdded);
 
     const dispatch = useDispatch();
     const { title } = useParams();
-    //console.log("id", title)
-    const paintingsData = useSelector(state => state.data.paintingsData);
+
+
+    const getRegisterNumber = () => {
+        if (registerNumber === null) {
+            return Date.now()
+        } else {
+            return registerNumber
+        }
+    }
+
+
     const addPaintingCart = (piece) => {
         dispatch(addPainting(piece));
         dispatch(paintReservedAsync(piece));
+        dispatch(addReservedPaintAsync({
+            title: piece.title,
+            registerNum: getRegisterNumber,
+            tech: piece.tech,
+            size: piece.size,
+            price: piece.price,
+        }))
     }
     const backFalse = () => {
         dispatch(switchFalse());
@@ -34,7 +52,7 @@ const Painting = () => {
                     .map(painting => {
                         //console.log("paint in pain", painting.img)
                         const imagen = painting.img;
-                        const resersed= painting.reserved;
+                        const resersed = painting.reserved;
                         return (
                             <div key={painting.id} className='container-md my-5'>
                                 <div className="row justify-content-center align-items-end">
@@ -50,20 +68,20 @@ const Painting = () => {
                                         <p>Price: {painting.price}</p>
                                     </div>
                                 </div>
-{resersed? 
-<Button 
-className="my-3" 
-variant="danger">
-    reserved
-</Button>
-:
-<Button
-onClick={() => addPaintingCart(painting)}
-className="my-3"
-variant="success">
-Add to the Cart
-</Button>
-}
+                                {resersed ?
+                                    <Button
+                                        className="my-3"
+                                        variant="danger">
+                                        reserved
+                                    </Button>
+                                    :
+                                    <Button
+                                        onClick={() => addPaintingCart(painting)}
+                                        className="my-3"
+                                        variant="success">
+                                        Add to the Cart
+                                    </Button>
+                                }
                             </div>
                         )
                     })}
