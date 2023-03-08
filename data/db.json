@@ -36,5 +36,15 @@
       "img": "./images/paintings_available/bread-circus.jpg",
       "reserved": false
     }
+  ],
+  "reservedPaintings": [
+    {
+      "hello": "Wolrd"
+    }
+  ],
+  "customers": [
+    {
+      "hello": "Customer"
+    }
   ]
 }

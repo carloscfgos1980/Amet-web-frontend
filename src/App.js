@@ -10,20 +10,21 @@ import { useEffect } from 'react';
 
 
 function App() {
-  const {paintingsData, isLoading} = useSelector(state=>state.data);
-	const dispatch = useDispatch();
+  const { paintingsData, isLoading } = useSelector(state => state.data);
+  console.log("paintingsData", paintingsData)
+  const dispatch = useDispatch();
 
-useEffect(() => {
-		dispatch(getDataAsync())
-	}, [dispatch])
+  useEffect(() => {
+    dispatch(getDataAsync())
+  }, [dispatch])
 
-if(isLoading){
-  return(
-    <div className='loading'>
-      <h1>Loading...</h1>
-    </div>
-  )
-}
+  if (isLoading) {
+    return (
+      <div className='loading'>
+        <h1>Loading...</h1>
+      </div>
+    )
+  }
 
   return (
     <div className="App">
