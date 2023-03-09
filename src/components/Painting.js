@@ -10,13 +10,9 @@ const Painting = () => {
     const alreadyAdded = useSelector(state => state.data.alreadyAdded);
     const registerNumber = useSelector(state => state.data.registerNum);
     const paintingsData = useSelector(state => state.data.paintingsData);
-    console.log("paintingsData", paintingsData);
 
     const dispatch = useDispatch();
     const { title } = useParams();
-
-
-
 
 
     const addPaintingCart = (piece) => {

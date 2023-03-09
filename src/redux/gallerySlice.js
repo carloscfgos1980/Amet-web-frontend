@@ -107,6 +107,7 @@ const gallerySlice = createSlice({
         addedPainting: [],
         clientAllData: [],
         fanAllData: [],
+        alreadyAdded: false,
         isLoading: true,
         registerNum: null,
         reservedPaintings: [],
@@ -123,6 +124,7 @@ const gallerySlice = createSlice({
             });
             state.paintingsData = updatedDataPaintings;
             state.addedPainting.push(painting);
+            state.alreadyAdded = true;
         },
         removePainting: (state, action) => {
             const { id } = action.payload;
@@ -135,13 +137,12 @@ const gallerySlice = createSlice({
                 return painting;
             });
             state.paintingsData = updatedDataPaintings;
+            state.paintingsData = false;
         },
         addClientData: (state, action) => {
-            //console.log("client", action.payload)
             state.clientAllData = action.payload;
         },
         fansData: (state, action) => {
-            console.log("fan", action.payload)
             state.fanAllData = action.payload;
         },
         resetAddedPainting: (state) => {

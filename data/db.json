@@ -25,7 +25,7 @@
       "size": "120 x 70 cm",
       "price": 300,
       "img": "./images/paintings_available/idolatry.jpg",
-      "reserved": true
+      "reserved": false
     },
     {
       "id": 4,
@@ -40,19 +40,11 @@
   "reservedPaintings": [
     {
       "title": "Burning",
-      "registerNum": 1678342366639,
+      "registerNum": 1678346334036,
       "tech": "acrylic/canvas",
       "size": "50 x 40 cm",
       "price": 800,
       "id": 1
-    },
-    {
-      "title": "Idolatry",
-      "registerNum": 1678345888392,
-      "tech": "acrylic/canvas",
-      "size": "120 x 70 cm",
-      "price": 300,
-      "id": 2
     }
   ],
   "customers": [
@@ -62,19 +54,9 @@
       "email": "kuva5008@gmail.com",
       "telephone": "626117235",
       "country": "The Netherlands",
-      "feedback": "ok",
-      "registerNum": 1678342366639,
+      "feedback": "Accomplished!",
+      "registerNum": 1678346334036,
       "id": 1
-    },
-    {
-      "name": "Carlos",
-      "last_name": "Infante",
-      "email": "kuva5008@gmail.com",
-      "telephone": "626117235",
-      "country": "The Netherlands",
-      "feedback": "mmmm\nmmmmm",
-      "registerNum": 1678345888392,
-      "id": 2
     }
   ],
   "fans": [
