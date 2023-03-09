@@ -92,23 +92,16 @@ const gallerySlice = createSlice({
             state.addedPainting.push(painting);
         },
         removePainting: (state, action) => {
-            const title = action.payload.title;
+            const { id } = action.payload;
             //console.log("title to remove", title);
-            state.addedPainting = state.addedPainting.filter(paint => paint.title !== title);
-            if (
-                state.paintingsData
-                    .map((item) => item.title)
-                    .includes(title)
-            ) {
-                let existingtItems = state.paintingsData.map(paint => {
-                    if (paint.title === title) {
-                        paint.reserved = false;
-                    }
-                    console.log("Reserved", paint.reserved)
-                    return paint;
-                });
-                state.paintingsData = existingtItems;
-            }
+            state.addedPainting = state.addedPainting.filter(paint => paint.id !== id);
+            let updatedDataPaintings = state.paintingsData.map(painting => {
+                if (painting.id === action.payload.id) {
+                    painting.reserved = !painting.reserved;
+                }
+                return painting;
+            });
+            state.paintingsData = updatedDataPaintings;
         },
         clientData: (state, action) => {
             //console.log("client", action.payload)
@@ -157,7 +150,7 @@ const gallerySlice = createSlice({
         [paintNotReservedAsync.fulfilled]: (state, action) => {
             let updatedDataPaintings = state.paintingsData.map(painting => {
                 if (painting.id === action.payload.id) {
-                    painting.reserved = false;
+                    painting.reserved = !painting.reserved;
                 }
                 return painting;
             });
