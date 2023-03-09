@@ -1,19 +1,21 @@
 import { useState } from "react";
 import { Button, Form } from "react-bootstrap";
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import { Link } from "react-router-dom";
-import { clientData } from "../redux/gallerySlice";
+import { addClientData } from "../redux/gallerySlice";
 import { motion } from 'framer-motion';
 
 const ContactsClients = () => {
+    const registerNumber = useSelector(state => state.data.registerNum);
     const dispatch = useDispatch();
     const [status, setStatus] = useState({
         name: '',
-        city: '',
+        last_name: '',
         country: '',
         telephone: '',
         email: '',
-        feedback: ''
+        feedback: '',
+        registerNum: registerNumber
     });
     const updateInput = (e) => {
         setStatus({
@@ -22,9 +24,7 @@ const ContactsClients = () => {
         })
     }
     const fillForm = () => {
-        //console.log(status)
-        dispatch(clientData(status))
-
+        dispatch(addClientData(status))
     }
 
     return (

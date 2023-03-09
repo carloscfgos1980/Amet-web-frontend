@@ -16,7 +16,7 @@
       "size": "50 x 40 cm",
       "price": 800,
       "img": "./images/paintings_available/burning.jpg",
-      "reserved": false
+      "reserved": true
     },
     {
       "id": 3,
@@ -40,28 +40,23 @@
   "reservedPaintings": [
     {
       "title": "Burning",
-      "registerNum": 1678336923286,
+      "registerNum": 1678342366639,
       "tech": "acrylic/canvas",
       "size": "50 x 40 cm",
       "price": 800,
       "id": 1
-    },
-    {
-      "title": "Burning",
-      "registerNum": 1678337258614,
-      "tech": "acrylic/canvas",
-      "size": "50 x 40 cm",
-      "price": 800,
-      "id": 2
-    },
-    {
-      "title": "Burning",
-      "registerNum": null,
-      "tech": "acrylic/canvas",
-      "size": "50 x 40 cm",
-      "price": 800,
-      "id": 3
     }
   ],
-  "customers": []
+  "customers": [
+    {
+      "name": "Carlos",
+      "last_name": "Infante",
+      "email": "kuva5008@gmail.com",
+      "telephone": "626117235",
+      "country": "The Netherlands",
+      "feedback": "ok",
+      "registerNum": 1678342366639,
+      "id": 1
+    }
+  ]
 }

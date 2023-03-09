@@ -1,11 +1,9 @@
 import { createSlice, createAsyncThunk } from '@reduxjs/toolkit';
-//import paintingsData from '../components/paintingsData'
-const API_URL = 'http://localhost:8000/paintingsData';
 
 export const getDataAsync = createAsyncThunk(
     'gallery/getDataAsync',
     async () => {
-        const response = await fetch(API_URL);
+        const response = await fetch('http://localhost:8000/paintingsData');
         if (response.ok) {
             const dataPaintings = await response.json();
             return { dataPaintings }
@@ -65,13 +63,30 @@ export const addReservedPaintAsync = createAsyncThunk(
     }
 );
 
+export const addCustomerAsync = createAsyncThunk(
+    'gallery/addCustomerAsync',
+    async (payload) => {
+        const resp = await fetch('http://localhost:8000/customers', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify(payload),
+        });
+
+        if (resp.ok) {
+            const new_customer = await resp.json();
+            return { new_customer };
+        }
+    }
+);
+
 const gallerySlice = createSlice({
     name: 'gallery',
     initialState: {
         // mockData:[],
         paintingsData: [],
         addedPainting: [],
-        alreadyAdded: false,
         clientAllData: [],
         fanAllData: [],
         isLoading: true,
@@ -103,12 +118,9 @@ const gallerySlice = createSlice({
             });
             state.paintingsData = updatedDataPaintings;
         },
-        clientData: (state, action) => {
+        addClientData: (state, action) => {
             //console.log("client", action.payload)
             state.clientAllData = action.payload;
-        },
-        switchFalse: (state) => {
-            state.alreadyAdded = false;
         },
         fansData: (state, action) => {
             console.log("fan", action.payload)
@@ -116,6 +128,9 @@ const gallerySlice = createSlice({
         },
         resetAddedPainting: (state) => {
             state.addedPainting = [];
+            state.registerNum = null;
+            state.clientAllData = [];
+            state.reservedPaintings = []
         },
         getRegisterNum: (state, action) => {
             console.log("payload", action.payload)
@@ -157,14 +172,17 @@ const gallerySlice = createSlice({
             state.paintingsData = updatedDataPaintings;
         },
         [addReservedPaintAsync.fulfilled]: (state, action) => {
-            console.log("payload reserved paintings", action.payload)
             state.reservedPaintings = action.payload;
             console.log("reserved paintings", state.reservedPaintings)
+        },
+        [addCustomerAsync.fulfilled]: (state, action) => {
+            state.clientAllData = action.payload;
+            console.log("clients data", state.clientAllData)
         },
     }
 });
 
 
-export const { addPainting, feedback, removePainting, clientData, switchFalse, fansData, resetAddedPainting, getRegisterNum } = gallerySlice.actions;
+export const { addPainting, removePainting, addClientData, switchFalse, fansData, resetAddedPainting, getRegisterNum } = gallerySlice.actions;
 
 export default gallerySlice.reducer;

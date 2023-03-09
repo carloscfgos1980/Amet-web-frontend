@@ -1,38 +1,32 @@
 import { Button, Card, Table } from "react-bootstrap";
-import { useSelector } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import { Link } from "react-router-dom";
+import { addCustomerAsync, resetAddedPainting } from "../redux/gallerySlice";
 
 const ClientTable = () => {
+  const registerNumber = useSelector(state => state.data.registerNum);
   const clientAllData = useSelector(state => state.data.clientAllData)
-  //console.log("all data", clientAllData);
   const addedPainting = useSelector(state => state.data.addedPainting);
+
+  const dispatch = useDispatch()
+
   let total = 0;
   addedPainting.forEach(paint => total += paint.price);
 
-  const sold = {
+  const client = {
     name: clientAllData.name,
+    last_name: clientAllData.last_name,
     email: clientAllData.email,
     telephone: clientAllData.telephone,
-    city: clientAllData.city,
     country: clientAllData.country,
     feedback: clientAllData.feedback,
-    sold: [],
+    registerNum: registerNumber
 
   }
-
-  const sell = addedPainting.map(paint => {
-    let clientDetails = {
-      title: paint.title,
-      rice: paint.price,
-    }
-    return clientDetails
-  });
-
-  sold.sold.push(sell);
-
-  console.log("sold", sold)
-
-
+  const addClientData = () => {
+    dispatch(addCustomerAsync(client))
+    dispatch(resetAddedPainting())
+  }
 
   return (
     <div className="container-lg">
@@ -46,7 +40,7 @@ const ClientTable = () => {
               </tr>
               <tr>
                 <td>Last Name:</td>
-                <td>{clientAllData.name}</td>
+                <td>{clientAllData.last_name}</td>
               </tr>
               <tr>
                 <td>Email:</td>
@@ -80,6 +74,7 @@ const ClientTable = () => {
         </Card>
         <Link className="col-sm-1 ms-5 m-1" to="/success">
           <Button
+            onClick={addClientData}
             variant="success"
           >CONFIRM</Button>{' '}
         </Link>
