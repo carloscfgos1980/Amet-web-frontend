@@ -2,8 +2,9 @@ import { useState } from "react";
 import { Form } from "react-bootstrap";
 import { useDispatch } from "react-redux";
 import { Link } from "react-router-dom";
-import { fansData } from "./redux/gallerySlice";
+//import { fansData } from "./redux/gallerySlice";
 import { motion } from 'framer-motion';
+import { addFanAsync } from "./redux/gallerySlice";
 
 
 
@@ -11,11 +12,11 @@ const Contact = () => {
     const dispatch = useDispatch();
     const [status, setStatus] = useState({
         name: '',
-        city: '',
+        last_name: '',
         country: '',
         telephone: '',
         email: '',
-        feedback: ''
+        feedback: '',
     });
     const updateInput = (e) => {
         setStatus({
@@ -23,10 +24,19 @@ const Contact = () => {
             [e.target.name]: e.target.value
         })
     }
-    const fillForm = (e) => {
-        e.preventDefault();
-        //console.log(state)
-        dispatch(fansData(status))
+
+    const fansData = {
+        name: status.name,
+        last_name: status.last_name,
+        country: status.country,
+        telephone: status.telephone,
+        email: status.email,
+        comment: status.feedback
+
+    }
+    console.log(fansData)
+    const addFan = () => {
+        dispatch(addFanAsync(fansData))
 
     }
 
@@ -43,10 +53,10 @@ const Contact = () => {
                         <Form.Group className="mb-3" controlId="formBasicPassword">
                             <Form.Control
                                 onChange={updateInput}
-                                type="text" name="name" placeholder="Name & Last Name" />
+                                type="text" name="name" placeholder="Name" />
                         </Form.Group>
                         <Form.Group className="mb-3" controlId="formBasicPassword">
-                            <Form.Control type="text" name="city" onChange={updateInput} placeholder="City" />
+                            <Form.Control type="text" name="last_name" onChange={updateInput} placeholder="Last Name" />
                         </Form.Group>
                         <Form.Group className="mb-3" controlId="formBasicPassword">
                             <Form.Control type="text" name="country" onChange={updateInput} placeholder="Country" />
@@ -72,7 +82,8 @@ const Contact = () => {
             <div className="text-center me-5 mb-3">
                 <span className="pe-5">
                     <Link to="/">
-                        <h3 className="btn btn-secundary px-5 bg-dark text-light" onClick={() => fillForm} >
+                        <h3 className="btn btn-secundary px-5 bg-dark text-light"
+                            onClick={addFan} >
                             Submit
                         </h3>
                     </Link>

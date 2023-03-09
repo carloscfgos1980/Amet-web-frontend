@@ -70,7 +70,7 @@ const ContactsClients = () => {
                     </div>
                     <div className="text-center me-5 mb-3">
 
-                        <form className="pe-5" onClick={fillForm(status)}>
+                        <form className="pe-5" onClick={fillForm}>
                             <Link to="/check-data">
                                 <h3 className="btn btn-secundary px-5 bg-dark text-light"  >
                                     Submit

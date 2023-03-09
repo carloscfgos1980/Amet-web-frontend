@@ -81,6 +81,24 @@ export const addCustomerAsync = createAsyncThunk(
     }
 );
 
+export const addFanAsync = createAsyncThunk(
+    'gallery/addFanAsync',
+    async (payload) => {
+        const resp = await fetch('http://localhost:8000/fans', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify(payload),
+        });
+
+        if (resp.ok) {
+            const new_fan = await resp.json();
+            return { new_fan };
+        }
+    }
+);
+
 const gallerySlice = createSlice({
     name: 'gallery',
     initialState: {
@@ -178,6 +196,10 @@ const gallerySlice = createSlice({
         [addCustomerAsync.fulfilled]: (state, action) => {
             state.clientAllData = action.payload;
             console.log("clients data", state.clientAllData)
+        },
+        [addFanAsync.fulfilled]: (state, action) => {
+            state.fanAllData = action.payload;
+            console.log("clients data", state.fanAllData)
         },
     }
 });

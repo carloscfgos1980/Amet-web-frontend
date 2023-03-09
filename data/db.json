@@ -25,7 +25,7 @@
       "size": "120 x 70 cm",
       "price": 300,
       "img": "./images/paintings_available/idolatry.jpg",
-      "reserved": false
+      "reserved": true
     },
     {
       "id": 4,
@@ -45,6 +45,14 @@
       "size": "50 x 40 cm",
       "price": 800,
       "id": 1
+    },
+    {
+      "title": "Idolatry",
+      "registerNum": 1678345888392,
+      "tech": "acrylic/canvas",
+      "size": "120 x 70 cm",
+      "price": 300,
+      "id": 2
     }
   ],
   "customers": [
@@ -56,6 +64,27 @@
       "country": "The Netherlands",
       "feedback": "ok",
       "registerNum": 1678342366639,
+      "id": 1
+    },
+    {
+      "name": "Carlos",
+      "last_name": "Infante",
+      "email": "kuva5008@gmail.com",
+      "telephone": "626117235",
+      "country": "The Netherlands",
+      "feedback": "mmmm\nmmmmm",
+      "registerNum": 1678345888392,
+      "id": 2
+    }
+  ],
+  "fans": [
+    {
+      "name": "Carlos",
+      "last_name": "Infante",
+      "country": "The Netherlands",
+      "telephone": "626117235",
+      "email": "kuva5008@gmail.com",
+      "comment": "nnnnn",
       "id": 1
     }
   ]
