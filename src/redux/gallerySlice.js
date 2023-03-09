@@ -81,37 +81,15 @@ const gallerySlice = createSlice({
     reducers: {
         addPainting: (state, action) => {
             //console.log("action", action.payload)
-            const { title, id, tech, price, img, reserved } = action.payload;
-            if (
-                state.addedPainting
-                    .map((item) => item.title)
-                    .includes(title)
-            ) {
-                state.alreadyAdded = true;
-                //state.addedPainting = state.addedPainting;
-
-            } else {
-                let newPaintCart =
-                {
-                    id,
-                    title,
-                    tech,
-                    price,
-                    img,
-                    reserved
-                };
-                let existingtItems = state.paintingsData.map(paint => {
-                    if (paint.title === title) {
-                        paint.reserved = true;
-                    }
-                    //console.log("Reserved", paint.reserved)
-                    return paint;
-                });
-                state.paintingsData = existingtItems;
-                state.addedPainting.push(newPaintCart);
-                state.alreadyAdded = true;
-
-            }
+            const painting = action.payload
+            let updatedDataPaintings = state.paintingsData.map(painting => {
+                if (painting.id === action.payload.id) {
+                    painting.reserved = !painting.reserved;
+                }
+                return painting;
+            });
+            state.paintingsData = updatedDataPaintings;
+            state.addedPainting.push(painting);
         },
         removePainting: (state, action) => {
             const title = action.payload.title;
@@ -170,7 +148,7 @@ const gallerySlice = createSlice({
         [paintReservedAsync.fulfilled]: (state, action) => {
             let updatedDataPaintings = state.paintingsData.map(painting => {
                 if (painting.id === action.payload.id) {
-                    painting.reserved = true;
+                    painting.reserved = !painting.reserved;
                 }
                 return painting;
             });
