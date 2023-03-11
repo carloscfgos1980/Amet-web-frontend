@@ -11,6 +11,9 @@
     npm install recharts //To implement charts
     npm install react-bootstrap bootstrap
     npm install react-bootstrap-icons --save
+    npm i react-youtube
+    npm install react-native-webview
+    npm install react-native-youtube-iframe
 
 ## Leyend:
 

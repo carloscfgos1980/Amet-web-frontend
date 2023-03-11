@@ -3,7 +3,8 @@ import { FaRegAddressBook } from 'react-icons/fa';
 import { BsTelephonePlus } from 'react-icons/bs';
 import { MdOutlineMarkEmailRead } from 'react-icons/md';
 import { TfiInstagram } from 'react-icons/tfi';
-import { AiOutlineLinkedin, AiOutlineFacebook, AiFillTwitterSquare } from 'react-icons/ai';
+
+import { AiOutlineLinkedin, AiOutlineFacebook, AiFillTwitterSquare, AiFillYoutube } from 'react-icons/ai';
 
 
 
@@ -41,17 +42,20 @@ const Footer = () => {
                     </div>
                     <div className="col-sm-3 text-center py-2">
                         <h3 className="text-light py-1">Follow us</h3>
-                        <a className="text-light px-1" href='https://www.instagram.com/ametlaza/?hl=es'>
+                        <a className="text-light px-1" href='https://www.instagram.com/ametlaza/?hl=es' target="_blank" rel="noreferrer">
                             <TfiInstagram />
                         </a >
-                        <a className="text-light px-1 lead" href='https://www.linkedin.com/in/amet-laza-mu%C3%B1oz-22b397112?originalSubdomain=nl'>
+                        <a className="text-light px-1 lead" href='https://www.linkedin.com/in/amet-laza-mu%C3%B1oz-22b397112?originalSubdomain=nl' target="_blank" rel="noreferrer">
                             <AiOutlineLinkedin />
                         </a>
-                        <a className="text-light px-1 lead" href='https://www.facebook.com/people/Amet-laza-mu%C3%B1oz/100063895069604/'>
+                        <a className="text-light px-1 lead" href='https://www.facebook.com/people/Amet-laza-mu%C3%B1oz/100063895069604/' target="_blank" rel="noreferrer">
                             <AiOutlineFacebook />
                         </a>
-                        <a className="text-light px-1 lead" href='https://twitter.com/ametlazamuoz'>
+                        <a className="text-light px-1 lead" href='https://twitter.com/ametlazamuoz' target="_blank" rel="noreferrer">
                             <AiFillTwitterSquare />
+                        </a>
+                        <a className="text-light px-1 lead" href='https://youtube.com/@Alazaarte' target="_blank" rel="noreferrer">
+                            <AiFillYoutube />
                         </a>
                     </div>
                 </div>
