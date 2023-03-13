@@ -3,10 +3,10 @@ import { createSlice, createAsyncThunk } from '@reduxjs/toolkit';
 export const getDataAsync = createAsyncThunk(
     'gallery/getDataAsync',
     async () => {
-        const response = await fetch('http://localhost:8000/paintingsData');
+        const response = await fetch('http://localhost:8000/data');
         if (response.ok) {
-            const dataPaintings = await response.json();
-            return { dataPaintings }
+            const data = await response.json();
+            return { data }
         }
     }
 );
@@ -14,7 +14,7 @@ export const getDataAsync = createAsyncThunk(
 export const paintReservedAsync = createAsyncThunk(
     'gallery/paintReservedAsync',
     async (payload) => {
-        const resp = await fetch(`http://localhost:8000/paintingsData/${payload.id}`, {
+        const resp = await fetch(`http://localhost:8000/data/paintingsData/${payload.id}`, {
             method: 'PATCH',
             headers: {
                 'Content-Type': 'application/json',
@@ -31,7 +31,7 @@ export const paintReservedAsync = createAsyncThunk(
 export const paintNotReservedAsync = createAsyncThunk(
     'gallery/paintNotReservedAsync',
     async (payload) => {
-        const resp = await fetch(`http://localhost:8000/paintingsData/${payload.id}`, {
+        const resp = await fetch(`http://localhost:8000/data/paintingsData/${payload.id}`, {
             method: 'PATCH',
             headers: {
                 'Content-Type': 'application/json',
@@ -102,8 +102,8 @@ export const addFanAsync = createAsyncThunk(
 const gallerySlice = createSlice({
     name: 'gallery',
     initialState: {
-        // mockData:[],
         paintingsData: [],
+        artSold: [],
         addedPainting: [],
         clientAllData: [],
         fanAllData: [],
@@ -167,8 +167,11 @@ const gallerySlice = createSlice({
         },
         [getDataAsync.fulfilled]: (state, action) => {
             console.log('Data fetched successfully!')
-            console.log(action.payload.dataPaintings)
-            state.paintingsData = action.payload.dataPaintings;
+            console.log("check fetch payload.paintings.", action.payload.data.paintingsData)
+            console.log("check fetch payload sold art ", action.payload.data.artSold)
+            state.paintingsData = action.payload.data.paintingsData;
+            console.log(action.payload.data.artSold)
+            state.artSold = action.payload.data.artSold;
             state.isLoading = false;
             return action.payloads;
         },

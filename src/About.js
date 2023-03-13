@@ -16,7 +16,7 @@ const About = () => {
                     <Accordion.Body>
                         <div className="accord">
                             <p>
-                                From Cienfuegos, my city, and I was born in Cuba. I started  around 20 years ago, my step into the art world by the teaching of many art professors, which I'm very thankful for a part of  the knowledge that I have today. As an artist I'm constantly learning from the others, from their stories  mixing with my own experience as a  person and from there I start to give shape to my palette, always following the concept from raw colors and lines. From a moment I can remind you of a wall from the street full of life and struggles. It is not my intention to follow the general concept of beauty or a standard beauty that is easy to notice.
+                                From Cienfuegos, my city, and I was born in Cuba. I started  around 20 createds ago, my step into the art world by the teaching of many art professors, which I'm very thankful for a part of  the knowledge that I have today. As an artist I'm constantly learning from the others, from their stories  mixing with my own experience as a  person and from there I start to give shape to my palette, always following the concept from raw colors and lines. From a moment I can remind you of a wall from the street full of life and struggles. It is not my intention to follow the general concept of beauty or a standard beauty that is easy to notice.
                             </p>
                             <img className="derecha" width='400px' src="./images/about/amet-wall.png" alt="Amet wall" />
                             <p>
@@ -37,7 +37,7 @@ const About = () => {
                                 where all people with positive energy is welcomed, we mix art with music (NO
                                 REGGEATON) and domino game. Our space works like a workshop
                                 and a gallery at the same time. We also sponsor concerts of alternative cuban music,
-                                hip hop and reggae mostly <a href='https://www.facebook.com/profile.php?id=100063491860763'>(K’Bolá project)</a>. Almost 3 years we have been working as
+                                hip hop and reggae mostly <a href='https://www.facebook.com/profile.php?id=100063491860763'>(K’Bolá project)</a>. Almost 3 createds we have been working as
                                 Poco Bonito Project. During this time we have done 7 exhibitions. We always mix art
                                 with alternative Cuban and international music. There are just two
                                 differents ways of réflex our ideas of inclusión, embrece the difference, to be critical
