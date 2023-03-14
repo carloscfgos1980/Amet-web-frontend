@@ -3,7 +3,7 @@ import { createSlice, createAsyncThunk } from '@reduxjs/toolkit';
 export const getDataAsync = createAsyncThunk(
     'gallery/getDataAsync',
     async () => {
-        const response = await fetch('http://localhost:8000/data');
+        const response = await fetch('http://localhost:8000/paintingsData');
         if (response.ok) {
             const data = await response.json();
             return { data }
@@ -14,7 +14,7 @@ export const getDataAsync = createAsyncThunk(
 export const paintReservedAsync = createAsyncThunk(
     'gallery/paintReservedAsync',
     async (payload) => {
-        const resp = await fetch(`http://localhost:8000/data/paintingsData/${payload.id}`, {
+        const resp = await fetch(`http://localhost:8000/paintingsData/${payload.id}`, {
             method: 'PATCH',
             headers: {
                 'Content-Type': 'application/json',
@@ -31,7 +31,7 @@ export const paintReservedAsync = createAsyncThunk(
 export const paintNotReservedAsync = createAsyncThunk(
     'gallery/paintNotReservedAsync',
     async (payload) => {
-        const resp = await fetch(`http://localhost:8000/data/paintingsData/${payload.id}`, {
+        const resp = await fetch(`http://localhost:8000/paintingsData/${payload.id}`, {
             method: 'PATCH',
             headers: {
                 'Content-Type': 'application/json',
@@ -114,7 +114,6 @@ const gallerySlice = createSlice({
     },
     reducers: {
         addPainting: (state, action) => {
-            //console.log("action", action.payload)
             const painting = action.payload
             let updatedDataPaintings = state.paintingsData.map(painting => {
                 if (painting.id === action.payload.id) {
@@ -128,7 +127,6 @@ const gallerySlice = createSlice({
         },
         removePainting: (state, action) => {
             const { id } = action.payload;
-            //console.log("title to remove", title);
             state.addedPainting = state.addedPainting.filter(paint => paint.id !== id);
             let updatedDataPaintings = state.paintingsData.map(painting => {
                 if (painting.id === action.payload.id) {
@@ -142,6 +140,9 @@ const gallerySlice = createSlice({
         addClientData: (state, action) => {
             state.clientAllData = action.payload;
         },
+        switchFalse: (state, action) => {
+            state.alreadyAdded = false;
+        },
         fansData: (state, action) => {
             state.fanAllData = action.payload;
         },
@@ -152,11 +153,9 @@ const gallerySlice = createSlice({
             state.reservedPaintings = []
         },
         getRegisterNum: (state, action) => {
-            console.log("payload", action.payload)
             if (state.registerNum === null) {
                 state.registerNum = action.payload
             }
-            console.log("resgiter number in store:", state.registerNum)
         },
 
     },
@@ -167,11 +166,12 @@ const gallerySlice = createSlice({
         },
         [getDataAsync.fulfilled]: (state, action) => {
             console.log('Data fetched successfully!')
-            console.log("check fetch payload.paintings.", action.payload.data.paintingsData)
-            console.log("check fetch payload sold art ", action.payload.data.artSold)
-            state.paintingsData = action.payload.data.paintingsData;
-            console.log(action.payload.data.artSold)
-            state.artSold = action.payload.data.artSold;
+            const allPaintings = action.payload.data
+            let available = allPaintings.filter(paint => paint.sold === false && paint.showDOM === true)
+
+            state.paintingsData = available;
+            let solded = allPaintings.filter(paint => paint.sold === true && paint.showDOM === true)
+            state.artSold = solded;
             state.isLoading = false;
             return action.payloads;
         },
@@ -195,15 +195,12 @@ const gallerySlice = createSlice({
         },
         [addReservedPaintAsync.fulfilled]: (state, action) => {
             state.reservedPaintings = action.payload;
-            console.log("reserved paintings", state.reservedPaintings)
         },
         [addCustomerAsync.fulfilled]: (state, action) => {
             state.clientAllData = action.payload;
-            console.log("clients data", state.clientAllData)
         },
         [addFanAsync.fulfilled]: (state, action) => {
             state.fanAllData = action.payload;
-            console.log("clients data", state.fanAllData)
         },
     }
 });

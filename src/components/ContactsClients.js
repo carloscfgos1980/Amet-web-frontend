@@ -38,9 +38,10 @@ const ContactsClients = () => {
                     <Button variant="warning">back</Button>{' '}
                 </div>
             </Link>
-            <h1 className="display-5 text-center my-2">Contacts</h1>
-            <Form className="container-fluid" >
-                <div className="row justify-content-around align-items-end">
+            <div className="row justify-content-around align-items-end">
+                <h1 className="display-5 text-center my-2">Contacts</h1>
+                <Form className="container-fluid" >
+
                     <div className="col-sm-3 ms-5">
                         <Form.Group className="mb-3" controlId="formBasicPassword">
                             <Form.Control
@@ -77,10 +78,9 @@ const ContactsClients = () => {
                                 </h3>
                             </Link>
                         </form>
-
                     </div>
-                </div>
-            </Form>
+                </Form>
+            </div>
 
         </motion.div>
     );

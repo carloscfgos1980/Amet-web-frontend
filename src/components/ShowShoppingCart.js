@@ -9,7 +9,6 @@ import { motion } from 'framer-motion';
 const ShowShoppingCart = () => {
     let total = 0;
     const addedPainting = useSelector(state => state.data.addedPainting);
-    //console.log("added painting", addedPainting)
 
     addedPainting.forEach(item => {
         total += item.price;
@@ -18,7 +17,6 @@ const ShowShoppingCart = () => {
     const dispatch = useDispatch();
 
     const removing = (item) => {
-        //console.log("value", title)
         dispatch(removePainting(item));
         dispatch(paintNotReservedAsync(item))
     }
@@ -38,7 +36,6 @@ const ShowShoppingCart = () => {
             <h1 className="display-5 fw-bold" >Shopping Cart</h1>
             {addedPainting.map(painting => {
                 const imagen = painting.img
-                //console.log("imagen", painting.img)
                 return (
                     <div key={painting.id} className='container my-5'>
                         <div className="row justify-content-center align-items-end">

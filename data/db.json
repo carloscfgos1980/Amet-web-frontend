@@ -1,207 +1,271 @@
 {
-  "data": {
-    "paintingsData": [
-      {
-        "id": 1,
-        "title": "Gossip",
-        "tech": "acrylic/canvas",
-        "size": "50 x 40 cm",
-        "price": 300,
-        "img": "./images/paintings_available/gossip.jpg",
-        "reserved": true
-      },
-      {
-        "id": 2,
-        "title": "Burning",
-        "tech": "acrylic/canvas",
-        "size": "50 x 40 cm",
-        "price": 800,
-        "img": "./images/paintings_available/burning.jpg",
-        "reserved": true
-      },
-      {
-        "id": 3,
-        "title": "Idolatry",
-        "tech": "acrylic/canvas",
-        "size": "120 x 70 cm",
-        "price": 300,
-        "img": "./images/paintings_available/idolatry.jpg",
-        "reserved": false
-      },
-      {
-        "id": 4,
-        "title": "Bread & Circus",
-        "tech": "acrylic/canvas",
-        "size": "50 x 40 cm",
-        "price": 400,
-        "img": "./images/paintings_available/bread-circus.jpg",
-        "reserved": false
-      }
-    ],
-    "artSold": [
-      {
-        "id": 1,
-        "title": "amet-africa",
-        "tech": "acrylic/paper",
-        "size": "50 x 40 cm",
-        "price": 300,
-        "img": "./images/art_sold/amet-africa.png",
-        "created": 2015,
-        "sold": "31-12-2018"
-      },
-      {
-        "id": 2,
-        "title": "amet-african_mask",
-        "tech": "scupture",
-        "size": "50 x 40 cm",
-        "price": 200,
-        "img": "./images/art_sold/amet-african_mask.png",
-        "created": 2015,
-        "sold": "31-12-2018"
-      },
-      {
-        "id": 3,
-        "title": "amet-under_the_sun",
-        "tech": "acrylic/paper",
-        "size": "50 x 40 cm",
-        "price": 100,
-        "img": "./images/art_sold/amet-under_the_sun.png",
-        "created": 2016,
-        "sold": "31-12-2018"
-      },
-      {
-        "id": 4,
-        "title": "amet-captivity",
-        "tech": "acrylic/canvas",
-        "size": "100 x 70 cm",
-        "price": 100,
-        "img": "./images/art_sold/amet-captivity.png",
-        "created": 2016,
-        "sold": "31-12-2018"
-      },
-      {
-        "id": 5,
-        "title": "amet-escape",
-        "tech": "acrylic/paper",
-        "size": "50 x 40 cm",
-        "price": 100,
-        "img": "./images/art_sold/amet-escape.png",
-        "created": 2016,
-        "sold": "31-12-2018"
-      },
-      {
-        "id": 6,
-        "title": "amet-god",
-        "tech": "acrylic/paper",
-        "size": "50 x 40 cm",
-        "price": 100,
-        "img": "./images/art_sold/amet-god.png",
-        "created": 2016,
-        "sold": "31-12-2018"
-      },
-      {
-        "id": 7,
-        "title": "amet-graffiti_juanma",
-        "tech": "graffity",
-        "size": "200 x 100 cm",
-        "price": 500,
-        "img": "./images/art_sold/amet-graffiti_juanma.png",
-        "created": 2015,
-        "sold": "31-12-2018"
-      },
-      {
-        "id": 8,
-        "title": "amet-heaven_is_mine",
-        "tech": "acrylic/canvas",
-        "size": "50 x 40 cm",
-        "price": 400,
-        "img": "./images/art_sold/amet-heaven_is_mine.png",
-        "created": 2017,
-        "sold": "31-12-2018"
-      },
-      {
-        "id": 9,
-        "title": "amet-hunger",
-        "tech": "acrylic/canvas",
-        "size": "50 x 40 cm",
-        "price": 400,
-        "img": "./images/art_sold/amet-hunger.png",
-        "created": 2017,
-        "sold": "31-12-2018"
-      },
-      {
-        "id": 10,
-        "title": "amet-keep_talking",
-        "tech": "acrylic/canvas",
-        "size": "50 x 40 cm",
-        "price": 400,
-        "img": "./images/art_sold/amet-keep_talking.png",
-        "created": 2017,
-        "sold": "31-12-2018"
-      },
-      {
-        "id": 11,
-        "title": "amet-poster",
-        "tech": "acrylic/canvas",
-        "size": "50 x 40 cm",
-        "price": 400,
-        "img": "./images/art_sold/amet-poster.png",
-        "created": 2016,
-        "sold": "31-12-2018"
-      },
-      {
-        "id": 12,
-        "title": "amet-roles_switched",
-        "tech": "acrylic/canvas",
-        "size": "150 x 90 cm",
-        "price": 1400,
-        "img": "./images/art_sold/amet-roles_switched.png",
-        "created": 2018,
-        "sold": "31-12-2018"
-      },
-      {
-        "id": 13,
-        "title": "amet-selfportrait_red",
-        "tech": "acrylic/canvas",
-        "size": "50 x 40 cm",
-        "price": 400,
-        "img": "./images/art_sold/amet-selfportrait_red.png",
-        "created": 2018,
-        "sold": "31-12-2018"
-      },
-      {
-        "id": 14,
-        "title": "amet-selfportrait_spring",
-        "tech": "acrylic/canvas",
-        "size": "50 x 40 cm",
-        "price": 400,
-        "img": "./images/art_sold/amet-selfportrait_spring.png",
-        "created": 2018,
-        "sold": "31-12-2018"
-      },
-      {
-        "id": 15,
-        "title": "amet-selfportrait_blue",
-        "tech": "acrylic/canvas",
-        "size": "50 x 40 cm",
-        "price": 400,
-        "img": "./images/art_sold/amet-selfportrait_blue.png",
-        "created": 2018,
-        "sold": "31-12-2018"
-      },
-      {
-        "id": 16,
-        "title": "amet-startling",
-        "tech": "acrylic/canvas",
-        "size": "50 x 40 cm",
-        "price": 400,
-        "img": "./images/art_sold/amet-startling.png",
-        "created": 2018,
-        "sold": "31-12-2018"
-      }
-    ]
-  },
-  "reservedPaintings": [],
-  "customers": [],
+  "paintingsData": [
+    {
+      "id": 1,
+      "title": "Gossip",
+      "tech": "acrylic/canvas",
+      "size": "50 x 40 cm",
+      "price": 300,
+      "img": "./images/paintings_available/gossip.jpg",
+      "reserved": true,
+      "sold": false,
+      "showDOM": true
+    },
+    {
+      "id": 2,
+      "title": "Burning",
+      "tech": "acrylic/canvas",
+      "size": "50 x 40 cm",
+      "price": 800,
+      "img": "./images/paintings_available/burning.jpg",
+      "reserved": true,
+      "sold": false,
+      "showDOM": true
+    },
+    {
+      "id": 3,
+      "title": "Idolatry",
+      "tech": "acrylic/canvas",
+      "size": "120 x 70 cm",
+      "price": 300,
+      "img": "./images/paintings_available/idolatry.jpg",
+      "reserved": false,
+      "sold": false,
+      "showDOM": true
+    },
+    {
+      "id": 4,
+      "title": "Bread & Circus",
+      "tech": "acrylic/canvas",
+      "size": "50 x 40 cm",
+      "price": 400,
+      "img": "./images/paintings_available/bread-circus.jpg",
+      "reserved": true,
+      "sold": false,
+      "showDOM": true
+    },
+    {
+      "id": 5,
+      "title": "amet-africa",
+      "tech": "acrylic/paper",
+      "size": "50 x 40 cm",
+      "price": 300,
+      "img": "./images/art_sold/amet-africa.png",
+      "created": 2015,
+      "soldDate": "31-12-2018",
+      "sold": true,
+      "showDOM": true
+    },
+    {
+      "id": 6,
+      "title": "amet-african_mask",
+      "tech": "scupture",
+      "size": "50 x 40 cm",
+      "price": 200,
+      "img": "./images/art_sold/amet-african_mask.png",
+      "created": 2015,
+      "soldDate": "31-12-2018",
+      "sold": true,
+      "showDOM": true
+    },
+    {
+      "id": 7,
+      "title": "amet-under_the_sun",
+      "tech": "acrylic/paper",
+      "size": "50 x 40 cm",
+      "price": 100,
+      "img": "./images/art_sold/amet-under_the_sun.png",
+      "created": 2016,
+      "soldDate": "31-12-2018",
+      "sold": true,
+      "showDOM": false
+    },
+    {
+      "id": 8,
+      "title": "amet-captivity",
+      "tech": "acrylic/canvas",
+      "size": "100 x 70 cm",
+      "price": 100,
+      "img": "./images/art_sold/amet-captivity.png",
+      "created": 2016,
+      "soldDate": "31-12-2018",
+      "sold": true,
+      "showDOM": true
+    },
+    {
+      "id": 9,
+      "title": "amet-escape",
+      "tech": "acrylic/paper",
+      "size": "50 x 40 cm",
+      "price": 100,
+      "img": "./images/art_sold/amet-escape.png",
+      "created": 2016,
+      "soldDate": "31-12-2018",
+      "sold": true,
+      "showDOM": true
+    },
+    {
+      "id": 10,
+      "title": "amet-god",
+      "tech": "acrylic/paper",
+      "size": "50 x 40 cm",
+      "price": 100,
+      "img": "./images/art_sold/amet-god.png",
+      "created": 2016,
+      "soldDate": "31-12-2018",
+      "sold": true,
+      "showDOM": true
+    },
+    {
+      "id": 11,
+      "title": "amet-graffiti_juanma",
+      "tech": "graffity",
+      "size": "200 x 100 cm",
+      "price": 500,
+      "img": "./images/art_sold/amet-graffiti_juanma.png",
+      "created": 2015,
+      "soldDate": "31-12-2018",
+      "sold": true,
+      "showDOM": true
+    },
+    {
+      "id": 12,
+      "title": "amet-heaven_is_mine",
+      "tech": "acrylic/canvas",
+      "size": "50 x 40 cm",
+      "price": 400,
+      "img": "./images/art_sold/amet-heaven_is_mine.png",
+      "created": 2017,
+      "soldDate": "31-12-2018",
+      "sold": true,
+      "showDOM": true
+    },
+    {
+      "id": 13,
+      "title": "amet-hunger",
+      "tech": "acrylic/canvas",
+      "size": "50 x 40 cm",
+      "price": 400,
+      "img": "./images/art_sold/amet-hunger.png",
+      "created": 2017,
+      "soldDate": "31-12-2018",
+      "sold": true,
+      "showDOM": true
+    },
+    {
+      "id": 14,
+      "title": "amet-keep_talking",
+      "tech": "acrylic/canvas",
+      "size": "50 x 40 cm",
+      "price": 400,
+      "img": "./images/art_sold/amet-keep_talking.png",
+      "created": 2017,
+      "soldDate": "31-12-2018",
+      "sold": true,
+      "showDOM": true
+    },
+    {
+      "id": 15,
+      "title": "amet-poster",
+      "tech": "acrylic/canvas",
+      "size": "50 x 40 cm",
+      "price": 400,
+      "img": "./images/art_sold/amet-poster.png",
+      "created": 2016,
+      "soldDate": "31-12-2018",
+      "sold": true,
+      "showDOM": true
+    },
+    {
+      "id": 16,
+      "title": "amet-roles_switched",
+      "tech": "acrylic/canvas",
+      "size": "150 x 90 cm",
+      "price": 1400,
+      "img": "./images/art_sold/amet-roles_switched.png",
+      "created": 2018,
+      "soldDate": "31-12-2018",
+      "sold": true,
+      "showDOM": true
+    },
+    {
+      "id": 17,
+      "title": "amet-selfportrait_red",
+      "tech": "acrylic/canvas",
+      "size": "50 x 40 cm",
+      "price": 400,
+      "img": "./images/art_sold/amet-selfportrait_red.png",
+      "created": 2018,
+      "soldDate": "31-12-2018",
+      "sold": true,
+      "showDOM": true
+    },
+    {
+      "id": 18,
+      "title": "amet-selfportrait_spring",
+      "tech": "acrylic/canvas",
+      "size": "50 x 40 cm",
+      "price": 400,
+      "img": "./images/art_sold/amet-selfportrait_spring.png",
+      "created": 2018,
+      "soldDate": "31-12-2018",
+      "sold": true,
+      "showDOM": true
+    },
+    {
+      "id": 19,
+      "title": "amet-selfportrait_blue",
+      "tech": "acrylic/canvas",
+      "size": "50 x 40 cm",
+      "price": 400,
+      "img": "./images/art_sold/amet-selfportrait_blue.png",
+      "created": 2018,
+      "soldDate": "31-12-2018",
+      "sold": true,
+      "showDOM": true
+    },
+    {
+      "id": 20,
+      "title": "amet-startling",
+      "tech": "acrylic/canvas",
+      "size": "50 x 40 cm",
+      "price": 400,
+      "img": "./images/art_sold/amet-startling.png",
+      "created": 2018,
+      "soldDate": "31-12-2018",
+      "sold": true,
+      "showDOM": true
+    }
+  ],
+  "reservedPaintings": [
+    {
+      "title": "Bread & Circus",
+      "registerNum": 1678765408256,
+      "tech": "acrylic/canvas",
+      "size": "50 x 40 cm",
+      "price": 400,
+      "id": 1
+    },
+    {
+      "title": "Burning",
+      "registerNum": 1678765408256,
+      "tech": "acrylic/canvas",
+      "size": "50 x 40 cm",
+      "price": 800,
+      "id": 2
+    }
+  ],
+  "customers": [
+    {
+      "name": "Carlos",
+      "last_name": "Infante",
+      "email": "kuva5008@gmail.com",
+      "telephone": "626117235",
+      "country": "The Netherlands",
+      "feedback": "mmmmmm",
+      "registerNum": 1678765408256,
+      "id": 1
+    }
+  ],
   "fans": []
 }

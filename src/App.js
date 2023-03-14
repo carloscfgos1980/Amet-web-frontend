@@ -4,14 +4,13 @@ import NavBar from './NavBar';
 import AnimatedRoutes from './components/AnimatedRoutes';
 import { BrowserRouter as Router } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
-import { getDataAsync, updateDataAsync } from './redux/gallerySlice';
+import { getDataAsync } from './redux/gallerySlice';
 import { useEffect } from 'react';
 
 
 
 function App() {
-  const { paintingsData, isLoading } = useSelector(state => state.data);
-  console.log("paintingsData", paintingsData)
+  const { isLoading } = useSelector(state => state.data);
   const dispatch = useDispatch();
 
   useEffect(() => {
@@ -20,9 +19,7 @@ function App() {
 
   if (isLoading) {
     return (
-      <div className='loading'>
-        <h1>Loading...</h1>
-      </div>
+      <h1>Loading...</h1>
     )
   }
 

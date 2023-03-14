@@ -34,7 +34,6 @@ const Contact = () => {
         comment: status.feedback
 
     }
-    console.log(fansData)
     const addFan = () => {
         dispatch(addFanAsync(fansData))
 

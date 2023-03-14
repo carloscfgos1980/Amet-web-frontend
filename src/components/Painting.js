@@ -40,7 +40,6 @@ const Painting = () => {
                 <h2 className="text-dark">Paintings</h2>
                 {paintingsData.filter(painting => painting.title === title)
                     .map(painting => {
-                        //console.log("paint in pain", painting.img)
                         const imagen = painting.img;
                         const resersed = painting.reserved;
                         return (

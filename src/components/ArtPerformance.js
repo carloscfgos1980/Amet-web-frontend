@@ -7,7 +7,7 @@ const ArtPerformance = () => {
             animate={{ opacity: 1 }}
             exit={{ opacity: 0, transition: { duration: 0.2 } }}
         >
-            <div className="row">
+            <div className="row bg-warning">
                 <div className="text-center">
                     <h3 className="lead text-dark py-3 fw-bold">Amet's performance</h3>
                     <div className='mx-3'>
