@@ -8,6 +8,7 @@ import { getRegisterNum } from '../redux/gallerySlice';
 
 const PaintingsCarousel = () => {
     const paintingsData = useSelector(state => state.data.paintingsData);
+    console.log("checking data", paintingsData)
 
     const dispatch = useDispatch();
 

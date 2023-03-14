@@ -99,6 +99,19 @@ export const addFanAsync = createAsyncThunk(
     }
 );
 
+export const deleteReservedAsync = createAsyncThunk(
+    'gallery/deleteReservedAsync',
+    async (payload) => {
+        const resp = await fetch(`http://localhost:8000/reservedPaintings/${payload.id}`, {
+            method: 'DELETE',
+        });
+
+        if (resp.ok) {
+            return { id: payload.id };
+        }
+    }
+);
+
 const gallerySlice = createSlice({
     name: 'gallery',
     initialState: {
@@ -115,32 +128,13 @@ const gallerySlice = createSlice({
     reducers: {
         addPainting: (state, action) => {
             const painting = action.payload
-            let updatedDataPaintings = state.paintingsData.map(painting => {
-                if (painting.id === action.payload.id) {
-                    painting.reserved = !painting.reserved;
-                }
-                return painting;
-            });
-            state.paintingsData = updatedDataPaintings;
             state.addedPainting.push(painting);
             state.alreadyAdded = true;
-        },
-        removePainting: (state, action) => {
-            const { id } = action.payload;
-            state.addedPainting = state.addedPainting.filter(paint => paint.id !== id);
-            let updatedDataPaintings = state.paintingsData.map(painting => {
-                if (painting.id === action.payload.id) {
-                    painting.reserved = !painting.reserved;
-                }
-                return painting;
-            });
-            state.paintingsData = updatedDataPaintings;
-            state.paintingsData = false;
         },
         addClientData: (state, action) => {
             state.clientAllData = action.payload;
         },
-        switchFalse: (state, action) => {
+        switchFalse: (state) => {
             state.alreadyAdded = false;
         },
         fansData: (state, action) => {
@@ -176,27 +170,31 @@ const gallerySlice = createSlice({
             return action.payloads;
         },
         [paintReservedAsync.fulfilled]: (state, action) => {
-            console.log("slected painting", action.payload)
+            console.log('payload added', action.payload.reservedPainting.id)
             let updatedDataPaintings = state.paintingsData.map(painting => {
-                if (painting.id === action.payload.id) {
+                if (painting.id === action.payload.reservedPainting.id) {
                     painting.reserved = !painting.reserved;
                 }
                 return painting;
             });
             state.paintingsData = updatedDataPaintings;
-            updatedDataPaintings = action.payload
         },
         [paintNotReservedAsync.fulfilled]: (state, action) => {
+            console.log('payload delete', action.payload.reservedPainting.id)
             let updatedDataPaintings = state.paintingsData.map(painting => {
-                if (painting.id === action.payload.id) {
+                if (painting.id === action.payload.reservedPainting.id) {
                     painting.reserved = !painting.reserved;
                 }
                 return painting;
             });
             state.paintingsData = updatedDataPaintings;
+
         },
         [addReservedPaintAsync.fulfilled]: (state, action) => {
             state.reservedPaintings = action.payload;
+        },
+        [deleteReservedAsync.fulfilled]: (state, action) => {
+            state.addedPainting = state.addedPainting.filter(paint => paint.id !== action.payload.id);
         },
         [addCustomerAsync.fulfilled]: (state, action) => {
             state.clientAllData = action.payload;
