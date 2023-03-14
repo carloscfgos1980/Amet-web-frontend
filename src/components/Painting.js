@@ -16,7 +16,6 @@ const Painting = () => {
 
 
     const addPaintingCart = (piece) => {
-        console.log("register number", registerNumber)
         const paintingDetails = {
             id: piece.id,
             title: piece.title,

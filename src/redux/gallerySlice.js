@@ -170,7 +170,6 @@ const gallerySlice = createSlice({
             return action.payloads;
         },
         [paintReservedAsync.fulfilled]: (state, action) => {
-            console.log('payload added', action.payload.reservedPainting.id)
             let updatedDataPaintings = state.paintingsData.map(painting => {
                 if (painting.id === action.payload.reservedPainting.id) {
                     painting.reserved = !painting.reserved;
@@ -180,7 +179,6 @@ const gallerySlice = createSlice({
             state.paintingsData = updatedDataPaintings;
         },
         [paintNotReservedAsync.fulfilled]: (state, action) => {
-            console.log('payload delete', action.payload.reservedPainting.id)
             let updatedDataPaintings = state.paintingsData.map(painting => {
                 if (painting.id === action.payload.reservedPainting.id) {
                     painting.reserved = !painting.reserved;
