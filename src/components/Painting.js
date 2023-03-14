@@ -16,15 +16,20 @@ const Painting = () => {
 
 
     const addPaintingCart = (piece) => {
-        dispatch(addPainting(piece));
-        dispatch(paintReservedAsync(piece));
-        dispatch(addReservedPaintAsync({
+        console.log("register number", registerNumber)
+        const paintingDetails = {
+            id: piece.id,
             title: piece.title,
-            registerNum: registerNumber,
             tech: piece.tech,
             size: piece.size,
             price: piece.price,
-        }))
+            img: piece.img,
+            reserved: piece.resersed,
+            registerNum: registerNumber,
+        }
+        dispatch(addPainting(paintingDetails));
+        dispatch(paintReservedAsync(paintingDetails));
+        dispatch(addReservedPaintAsync(paintingDetails))
     }
     const backFalse = () => {
         dispatch(switchFalse());

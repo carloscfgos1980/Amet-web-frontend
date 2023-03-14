@@ -19,7 +19,7 @@ export const paintReservedAsync = createAsyncThunk(
             headers: {
                 'Content-Type': 'application/json',
             },
-            body: JSON.stringify({ reserved: true }),
+            body: JSON.stringify({ reserved: true, registerNum: payload.registerNum }),
         });
 
         if (resp.ok) {
@@ -36,7 +36,7 @@ export const paintNotReservedAsync = createAsyncThunk(
             headers: {
                 'Content-Type': 'application/json',
             },
-            body: JSON.stringify({ reserved: false }),
+            body: JSON.stringify({ reserved: false, registerNum: null }),
         });
 
         if (resp.ok) {
@@ -176,6 +176,7 @@ const gallerySlice = createSlice({
             return action.payloads;
         },
         [paintReservedAsync.fulfilled]: (state, action) => {
+            console.log("slected painting", action.payload)
             let updatedDataPaintings = state.paintingsData.map(painting => {
                 if (painting.id === action.payload.id) {
                     painting.reserved = !painting.reserved;
@@ -183,6 +184,7 @@ const gallerySlice = createSlice({
                 return painting;
             });
             state.paintingsData = updatedDataPaintings;
+            updatedDataPaintings = action.payload
         },
         [paintNotReservedAsync.fulfilled]: (state, action) => {
             let updatedDataPaintings = state.paintingsData.map(painting => {

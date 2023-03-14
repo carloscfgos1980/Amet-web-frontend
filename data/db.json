@@ -6,10 +6,11 @@
       "tech": "acrylic/canvas",
       "size": "50 x 40 cm",
       "price": 300,
-      "img": "./images/paintings_available/gossip.jpg",
+      "img": "./images/paintings_available/amet-gossip.png",
       "reserved": true,
       "sold": false,
-      "showDOM": true
+      "showDOM": true,
+      "registerNum": 1678765408256
     },
     {
       "id": 2,
@@ -17,10 +18,11 @@
       "tech": "acrylic/canvas",
       "size": "50 x 40 cm",
       "price": 800,
-      "img": "./images/paintings_available/burning.jpg",
+      "img": "./images/paintings_available/amet-burning.png",
       "reserved": true,
       "sold": false,
-      "showDOM": true
+      "showDOM": true,
+      "registerNum": 1678788385427
     },
     {
       "id": 3,
@@ -28,10 +30,11 @@
       "tech": "acrylic/canvas",
       "size": "120 x 70 cm",
       "price": 300,
-      "img": "./images/paintings_available/idolatry.jpg",
-      "reserved": false,
+      "img": "./images/paintings_available/amet-idolatry.png",
+      "reserved": true,
       "sold": false,
-      "showDOM": true
+      "showDOM": true,
+      "registerNum": 1678789334751
     },
     {
       "id": 4,
@@ -39,10 +42,11 @@
       "tech": "acrylic/canvas",
       "size": "50 x 40 cm",
       "price": 400,
-      "img": "./images/paintings_available/bread-circus.jpg",
+      "img": "./images/paintings_available/amet-bread_circus.png",
       "reserved": true,
       "sold": false,
-      "showDOM": true
+      "showDOM": true,
+      "registerNum": 1678765408280
     },
     {
       "id": 5,
@@ -235,24 +239,107 @@
       "soldDate": "31-12-2018",
       "sold": true,
       "showDOM": true
+    },
+    {
+      "id": 21,
+      "title": "The Crown is mine (I)",
+      "tech": "acrylic/canvas",
+      "size": "50 x 40 cm",
+      "price": 400,
+      "img": "./images/paintings_available/amet-crown_is_mine_I.png",
+      "reserved": true,
+      "sold": false,
+      "showDOM": true,
+      "registerNum": 1678790626246
+    },
+    {
+      "id": 22,
+      "title": "The Crown is mine (II)",
+      "tech": "acrylic/canvas",
+      "size": "50 x 40 cm",
+      "price": 400,
+      "img": "./images/paintings_available/amet-crown_is_mine_II.png",
+      "reserved": false,
+      "sold": false,
+      "showDOM": true,
+      "registerNum": null
+    },
+    {
+      "id": 23,
+      "title": "Fighting back",
+      "tech": "acrylic/canvas",
+      "size": "50 x 40 cm",
+      "price": 400,
+      "img": "./images/paintings_available/amet-fighting_back.png",
+      "reserved": false,
+      "sold": false,
+      "showDOM": true,
+      "registerNum": null
+    },
+    {
+      "id": 24,
+      "title": "Immigrant",
+      "tech": "acrylic/canvas",
+      "size": "50 x 40 cm",
+      "price": 400,
+      "img": "./images/paintings_available/amet-immigrant.png",
+      "reserved": false,
+      "sold": false,
+      "showDOM": true,
+      "registerNum": null
+    },
+    {
+      "id": 25,
+      "title": "Welcome to paradise",
+      "tech": "acrylic/canvas",
+      "size": "50 x 40 cm",
+      "price": 400,
+      "img": "./images/paintings_available/amet-welcome_to_paradise.png",
+      "reserved": false,
+      "sold": false,
+      "showDOM": true,
+      "registerNum": null
+    },
+    {
+      "id": 26,
+      "title": "Who's right?",
+      "tech": "acrylic/canvas",
+      "size": "50 x 40 cm",
+      "price": 400,
+      "img": "./images/paintings_available/amet-whos_right.png",
+      "reserved": false,
+      "sold": false,
+      "showDOM": true,
+      "registerNum": null
     }
   ],
   "reservedPaintings": [
     {
-      "title": "Bread & Circus",
-      "registerNum": 1678765408256,
-      "tech": "acrylic/canvas",
-      "size": "50 x 40 cm",
-      "price": 400,
-      "id": 1
-    },
-    {
+      "id": 2,
       "title": "Burning",
-      "registerNum": 1678765408256,
       "tech": "acrylic/canvas",
       "size": "50 x 40 cm",
       "price": 800,
-      "id": 2
+      "img": "./images/paintings_available/amet-burning.png",
+      "registerNum": 1678788385427
+    },
+    {
+      "id": 3,
+      "title": "Idolatry",
+      "tech": "acrylic/canvas",
+      "size": "120 x 70 cm",
+      "price": 300,
+      "img": "./images/paintings_available/amet-idolatry.png",
+      "registerNum": 1678789334751
+    },
+    {
+      "id": 21,
+      "title": "The Crown is mine (I)",
+      "tech": "acrylic/canvas",
+      "size": "50 x 40 cm",
+      "price": 400,
+      "img": "./images/paintings_available/amet-crown_is_mine_I.png",
+      "registerNum": 1678790626246
     }
   ],
   "customers": [
@@ -262,9 +349,19 @@
       "email": "kuva5008@gmail.com",
       "telephone": "626117235",
       "country": "The Netherlands",
-      "feedback": "mmmmmm",
-      "registerNum": 1678765408256,
+      "feedback": "vvvvvvv",
+      "registerNum": 1678788385427,
       "id": 1
+    },
+    {
+      "name": "Ricardo",
+      "last_name": "moro",
+      "email": "pocobonitoproject@gmail.com",
+      "telephone": "2233345606",
+      "country": "Brasil",
+      "feedback": "sivvi[o",
+      "registerNum": 1678790626246,
+      "id": 2
     }
   ],
   "fans": []
