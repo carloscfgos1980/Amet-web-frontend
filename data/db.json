@@ -31,10 +31,10 @@
       "size": "120 x 70 cm",
       "price": 300,
       "img": "./images/paintings_available/amet-idolatry.png",
-      "reserved": false,
+      "reserved": true,
       "sold": false,
       "showDOM": true,
-      "registerNum": null
+      "registerNum": 1678806516977
     },
     {
       "id": 4,
@@ -247,10 +247,10 @@
       "size": "50 x 40 cm",
       "price": 400,
       "img": "./images/paintings_available/amet-crown_is_mine_I.png",
-      "reserved": false,
+      "reserved": true,
       "sold": false,
       "showDOM": true,
-      "registerNum": null
+      "registerNum": 1678806691413
     },
     {
       "id": 22,
@@ -313,7 +313,47 @@
       "registerNum": null
     }
   ],
-  "reservedPaintings": [],
-  "customers": [],
-  "fans": []
+  "reservedPaintings": [
+    {
+      "id": 3,
+      "title": "Idolatry",
+      "tech": "acrylic/canvas",
+      "size": "120 x 70 cm",
+      "price": 300,
+      "img": "./images/paintings_available/amet-idolatry.png",
+      "registerNum": 1678806516977
+    },
+    {
+      "id": 21,
+      "title": "The Crown is mine (I)",
+      "tech": "acrylic/canvas",
+      "size": "50 x 40 cm",
+      "price": 400,
+      "img": "./images/paintings_available/amet-crown_is_mine_I.png",
+      "registerNum": 1678806691413
+    }
+  ],
+  "customers": [
+    {
+      "name": "Carlos",
+      "last_name": "Infante",
+      "email": "kuva5008@gmail.com",
+      "telephone": "626117235",
+      "country": "The Netherlands",
+      "feedback": "Great Art!",
+      "registerNum": 1678806691413,
+      "id": 1
+    }
+  ],
+  "fans": [
+    {
+      "name": "Amet",
+      "last_name": "Laza",
+      "country": "The Netherlands",
+      "telephone": "626117200",
+      "email": "pocobonitoproject@gmail.com",
+      "comment": "Check it out!",
+      "id": 1
+    }
+  ]
 }

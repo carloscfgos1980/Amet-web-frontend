@@ -28,6 +28,23 @@ export const paintReservedAsync = createAsyncThunk(
         }
     }
 );
+export const paintUnReservedAsync = createAsyncThunk(
+    'gallery/paintUnReservedAsync',
+    async (payload) => {
+        const resp = await fetch(`http://localhost:8000/paintingsData/${payload.id}`, {
+            method: 'PATCH',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify({ reserved: false, registerNum: null }),
+        });
+
+        if (resp.ok) {
+            const reservedPainting = await resp.json();
+            return { reservedPainting };
+        }
+    }
+);
 export const paintNotReservedAsync = createAsyncThunk(
     'gallery/paintNotReservedAsync',
     async (payload) => {

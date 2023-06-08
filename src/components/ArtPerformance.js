@@ -12,14 +12,20 @@ const ArtPerformance = () => {
                     <h3 className="lead text-dark py-3 fw-bold">Amet's performance</h3>
                     <div className='mx-3'>
                         <img className="derecha" width='500px' src="./images/performance/amet-performance_2012.jpg" alt="Amet wall" />
+                        <p>Title: “I will sit down to meditate”</p>
+                        <p>Cienfuegos, Cuba. 2015</p>
                         <p>
-
-                            From Cienfuegos, my city, and I was born in Cuba. I started  around 20 createds ago, my step into the art world by the teaching of many art professors, which I'm very thankful for a part of  the knowledge that I have today. As an artist I'm constantly learning from the others, from their stories  mixing with my own experience as a  person and from there I start to give shape to my palette, always following the concept from raw colors and lines. From a moment I can remind you of a wall from the street full of life and struggles. It is not my intention to follow the general concept of beauty or a standard beauty that is easy to notice.
+                            The main goal of this performance that I presented in 2013 is based on the question: how long can one remain calm when they survive in an environment that threatens her/him? This question starts from the individual subject being but the true intention is also to search an answer of Cuban society as whole. I made this performance in my hometown, Cienfuegos, Cuba.  The scenery of the action takes place in the center of the city, specifically on the most busy pedestrian crossing in the city.
+                            I sat there for 5 minutes, in a meditative pose. The duration of the performance is neither realted to being cowardly and brave, just being human.
+                            Traffic laws are part of the discourse of the performance metaphor as the functioning of society.
                         </p>
                         <img className="izquierda" width='500px' src="./images/performance/Amet_performance_2017.jpg" alt="Amet KBola" />
+                        <p>Title: “Act of violence year”</p>
+                        <p>Cienfuegos, Cuba. 2015</p>
                         <p>
-
-                            In Cuba I have participated in many collective art events and solo shows but also have the joy of being co-founder of the art experimental project <a href='https://www.facebook.com/profile.php?id=100009424089335'>"Poco Bonito"</a> with Carlos Infante and other artist friends. There was our creative space and support where all the ideas was dancing in our head and brushes but also with our workshop we had a way to connect to with neighbors in the area from the  workshop which also children  and teenager was able to get close and see how we prepare our canvas and colors so in that way we made and influence in the community showing others way to create that not necessary was academic but with creativity freedom, freedom that many time  cause us political polemics with the establishment and also collateral to our gallery and with part of the incomes from the art selling. We had an event, creating  an scenery on the street where singers and bands coming from different cities  from cuba with not voice at the tv or radio the name of this project event was kbola which the  popular expression(kbola) can  meanings like saying hi or calling the attention from someone can be used on both ways when you are angry or when you are happy , this educative energies that surround us in our projects in Cuba. I was able to continue in Netherlands teaching in school name Isa Amsterdam as visual art professor teacher work that i enjoy and i combined also with my independent project as artist
+                            This performative action in one of its concepts tries to call the attention of a society. People are  becoming less and less sensitive to what happens around them. At the same time bring the attention about the fact that force can disfigure an object, idea, person, etc. I used an iron barrel to store water. I ditached from the commun use of this barrel.
+                            I started to hit the barrel with a heavy hammer. People were just watching. After a while few of the expectators requested the hammer and started to hit the barrel. I was a like a liberatin act of all this frustration we carry inside.
+                            An act of violence also  disfigured the one in power towards something inhuman. The gestures of the faces in those movements, the use of force, creates a type of expression and transformation.
                         </p>
                     </div>
                 </div>
