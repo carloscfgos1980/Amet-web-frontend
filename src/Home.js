@@ -14,10 +14,10 @@ const Home = () => {
                     <img className="pb-2 px-5" width='110%' src="./images/home/amet-portfolio.png" alt="Amet Portfolio" />
                 </div>
                 <div className="col-text-center col-sm-6" >
-                    <h2 className="display-6 pb-4 mx-3 text-start">Art goes beyond the sense of beauty, it has an "... integral rol in the fight for social change and the quest for freedom of expression.</h2>
+                    <h2 className="display-6 pb-4 mx-3 text-start pt-5 mt-5">Art goes beyond the sense of beauty, it has an "... integral rol in the fight for social change and the quest for freedom of expression.</h2>
                     <h2 className="display-6 pb-4 mx-3 text-start">... Art has the power to instil empathy -between people of different races and backgrounds- across the time and space, and that compassion is necessary to justice"
                     </h2>
-                    <h5 className="fw-bold text-end pt-3 me-3">Darren Walker</h5>
+                    <h5 className="fw-bold text-end me-3">Darren Walker</h5>
                     <h5 className="text-end me-3">President, Ford Fundation</h5>
                 </div>
                 <div className="row justify-content-center align-items-center py-5">
