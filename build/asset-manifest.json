@@ -1,0 +1,25 @@
+{
+  "files": {
+    "main.css": "/static/css/main.27cf12c0.css",
+    "main.js": "/static/js/main.45e692e9.js",
+    "static/media/amet-burning.png": "/static/media/amet-burning.16a11a3a8701dca190a5.png",
+    "static/media/amet-crown_is_mine_II.png": "/static/media/amet-crown_is_mine_II.95629f0a9a451be1e91b.png",
+    "static/media/amet-bread_circus.png": "/static/media/amet-bread_circus.b4f9d36a08d1e5b82ebb.png",
+    "static/media/amet-idolatry.png": "/static/media/amet-idolatry.03fa3bcf9f81623f7003.png",
+    "static/media/Amet_Logo.png": "/static/media/Amet_Logo.a5ea34375e7d9663af7b.png",
+    "static/media/amet-gossip.png": "/static/media/amet-gossip.dd71c4934d874571ad87.png",
+    "static/media/amet-fighting_back.png": "/static/media/amet-fighting_back.b764b18e2500b7a78700.png",
+    "static/media/amet-welcome_to_paradise.png": "/static/media/amet-welcome_to_paradise.40ca2dce9cb5c88d22a4.png",
+    "static/media/amet-immigrant.png": "/static/media/amet-immigrant.4ac976df9189116dfdbf.png",
+    "static/media/amet-crown_is_mine_I.png": "/static/media/amet-crown_is_mine_I.21b017668d326cc1db11.png",
+    "static/media/amet-whos_right.png": "/static/media/amet-whos_right.706688a6b7e901a6568d.png",
+    "static/media/celebration.gif": "/static/media/celebration.08ff63056c3079414b1e.gif",
+    "index.html": "/index.html",
+    "main.27cf12c0.css.map": "/static/css/main.27cf12c0.css.map",
+    "main.45e692e9.js.map": "/static/js/main.45e692e9.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.27cf12c0.css",
+    "static/js/main.45e692e9.js"
+  ]
+}
