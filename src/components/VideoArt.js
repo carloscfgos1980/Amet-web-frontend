@@ -44,7 +44,7 @@ const VideoArt = () => {
                 </div>
                 <div className="col-text-center col-sm-5 my-3">
                     <div className="video-responsive">
-                        <iframe width="560" height="315" src="https://www.youtube.com/embed/NKTig9Lf3N8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                        <iframe width="560" height="315" src="https://www.youtube.com/embed/0NxAsZgxkMk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
                     </div>
                 </div>
                 <div className="col-text-center col-sm-5 my-3">
